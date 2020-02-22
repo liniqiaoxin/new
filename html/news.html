@@ -20,9 +20,9 @@
 
     <link href="../css/navbar-fixed-top.css" rel="stylesheet">
     <script src="../js/ie-emulation-modes-warning.js"></script>
-    <!-- 引入样式 -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    
+    <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -61,8 +61,9 @@
 
 <div class="news">
         <div id="app">
-                <div class="row commodity new1" v-for="(item) in list" :key="item.id"
-                :data="list.slice((currentPage-1)*pagesize,currentPage*pagesize)"
+                <div class="row commodity new1" v-for="(item) in list.slice((currentPage-1)*pagesize,currentPage*pagesize)"
+                 :key="item.id"
+                
                 @click="newsClick( item.id )">
                         <div class="col-xs-6 col-md-4 imgs">
                           <img :data-src="item.img">
@@ -76,14 +77,21 @@
                     </div><!-- /.row -->  
                     <div>
                         <div class="wp-pager">
-                            <a href="###2"> &lt; </a>
-                            <a href="###1">1</a>
-                            <a href="###2">2</a>
-                            <span class="current">3</span>
-                            <span class="disabled"> &gt; </span>
+                          <div class="pagination">
+                            <el-pagination 
+                              @size-change="handleSizeChange" 
+                              @current-change="handleCurrentChange" 
+                              :current-page="currentPage" 
+                              :page-sizes="[2, 4, 6, 8,]" 
+                              :page-size="pagesize" 
+                              layout="total, sizes,prev, pager, next" 
+                              :total="list.length" 
+                              prev-text="上一页" 
+                              next-text="下一页">
+                            </el-pagination>
+                          </div>
                         </div>
                     </div>             
-
         </div>
 
 </div>
@@ -117,27 +125,31 @@
     </footer>
 </div>
 </div>
-
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../js/news.js"></script>
 <script>
 
    
 
         let vm = new Vue({
           el:'#app',
-          data:{
-            list:[],
-            total: 0,
-            pagesize:3,//每页的数据条数
-            currentPage:1,//默认开始页面
-            url: 'news.html?'
-               
+          data() {
+            return {
+                  list:[],
+                  currentPage: 1, //默认显示页面为1
+                  pagesize: 3, //    每页的数据条数
+                  url: 'news.html?'
+            } 
           },
           mounted () {
             // 页面一加载完成就执行getList方法
             this.getList();
           },
           methods: {
-           
+         
           
             //获取数据
            
@@ -147,29 +159,41 @@
               
                 console.log(response.data);
                    this.list = response.data.news;
-            
+                   this.totalCount = response.data.total
+                  
               })
               .catch(response => {
                 console.log("获取数据失败");
               })
-           
+              
             },
+                 //每页下拉显示数据
+           handleSizeChange: function (size) {
+            this.pagesize = size;
+            console.log('size::',this.pagesize) 
+            
+          },
+          //点击第几页
+          handleCurrentChange: function (currentPage) {
+            this.currentPage = currentPage;
+            console.log('currentPage::',this.currentPage) 
+          },
             newsClick (canshu) { //canshu是形参,在实际调用里实参是cctz(item.desc)里的item.desc
                         // escape将字符串转化成编码格式,接收页面到时候再转回来
                         var url = 'newsdetail.html' + '?id=' + escape(canshu);
                         window.open(url);
                     }
-          
           },
+           
+
+
           
         })
       </script>
 
-<script src="../js/index.js"></script>
-<!-- 引入组件库 -->
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')</script>
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <script src="../js/bootstrap.min.js"></script>
