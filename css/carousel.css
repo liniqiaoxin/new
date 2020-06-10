@@ -15,6 +15,7 @@ body {
   width: 100%;
 }
 
+
 .navbar {
   background-color: #413148;;
   margin: 0 auto;
@@ -43,7 +44,7 @@ body {
 -------------------------------------------------- */
 /* Carousel base class */
 .carousel {
-  height: 300px;
+  /* height: 300px; */
   margin-bottom: 40px;
 }
 .carousel-inner {
@@ -66,7 +67,7 @@ body {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 300px;
+  /* height: 300px; */
 }
 
 
@@ -236,7 +237,7 @@ footer>.row {
 
 @media (min-width: 992px) {
   .carousel {
-    height: 800px;
+    /* height: 800px; */
     margin-bottom: 60px;
   }
   /* Since positioning the image, we need to help out the caption */
@@ -251,7 +252,7 @@ footer>.row {
   }
   /* Declare heights because of positioning of img element */
   .carousel .item {
-    height: 800px;
+    /* height: 800px; */
     background-color: #777;
   }
   .carousel-inner > .item > img {
@@ -259,7 +260,7 @@ footer>.row {
     top: 0;
     left: 0;
     min-width: 100%;
-    height: 800px;
+    /* height: 800px; */
   }
 
 
