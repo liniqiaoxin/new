@@ -208,9 +208,7 @@ footer>.row {
   }
 
   /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-
-  }
+ 
   .col {
     text-align: center;
   }
