@@ -3,6 +3,7 @@
     margin: 0;
 }
 
+
 body {
     width: 100%;
     height: auto;
@@ -46,6 +47,7 @@ body {
     width: 1200px;
     margin: 0 auto;
     padding: 20px 50px;
+    padding-top: 90px;
 }
 
 .img-1 {

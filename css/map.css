@@ -1,5 +1,5 @@
 body {
-    height: auto;
+    height: 100%;
 }
 .main {
     width: 1170px;
@@ -59,4 +59,41 @@ body {
         font-size: 30px;
         margin-bottom: 30px;
     }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /*IE6不识别min-height*/
+    position: relative;
+}
+
+
+#page {
+
+    margin: 0 auto;
+    padding-bottom: 60px;
+    /*等于footer的高度*/
+
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /*脚部的高度*/
+    clear: both;
+}
+
+.active1 {
+    color:#413148!important;
+    background-color: #e5e5e5;
 }

@@ -31,6 +31,7 @@
 
     <!-- Custom styles for this template -->
     <link href="../css/carousel.css" rel="stylesheet">
+    <link href="../css/map.css" rel="stylesheet">
 </head>
 <!-- NAVBAR
 ================================================== -->
@@ -49,9 +50,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="news.html">新闻</a></li>
-                    <li><a href="about.html">关于我们</a></li>
+                    <li id="btn1"><a class="active1"href="index.html">首页</a></li>
+                    <li id="btn2"><a href="news.html">新闻</a></li>
+                    <li id="btn3"><a href="about.html">关于我们</a></li>
                 </ul>
 
             </div><!--/.nav-collapse -->
@@ -260,6 +261,28 @@
 <script src="../js/bootstrap.min.js"></script>
 
 <script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script>
+    $(function () {
+        $("#btn1").click(function () {
+            $("#content1").toggle();
+            var str = btn.innerHTML == "按钮1" ? "显示" : "按钮1";
+            btn.innerHTML = str;
+            btn1.css('color', '#0062cc');
+            $("#btn2").click(function () {
+                $("#content2").toggle();
+                var str = btn.innerHTML == "隐藏" ? "显示" : "隐藏";
+                btn.innerHTML = str;
+                btn1.css('color', '#0062cc');
+            });
+            $("#bt3").click(function () {
+                $("#content3").toggle();
+                var str = btn.innerHTML == "隐藏" ? "显示" : "隐藏";
+                btn.innerHTML = str;
+                btn1.css('color', '#0062cc');
+            });
+        });
+    })
+</script>
 
 </body>
 </html>
