@@ -2,7 +2,7 @@ body {
     height: 100%;
 }
 .main {
-    width: 1170px;
+    width: 1200px;
     margin-top: 55px;
     padding: 15px;
     margin: 0 auto;
@@ -15,9 +15,9 @@ body {
 .map {
     position: relative;
     float: left;
-    width:48%;
-    height:300px;
-    border:#ccc solid 1px;
+    width:50%;
+    height:500px;
+    /* border:#ccc solid 1px; */
     font-size:12px
 
 }

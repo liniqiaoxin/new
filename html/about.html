@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <meta name="description" content="NBA中国官方网站">
     <meta name="keywords" content="NBA中国,全明星赛,NBA视频直播,NBA赛程,NBA转播表,火箭,热火,湖人,马刺,快船,雷霆,篮网,美职篮,篮球,大卫斯特恩,乔丹,科比,林书豪,">
     <title>关于我们</title>
@@ -14,7 +14,7 @@
 
     <!--引用百度地图API-->
     
-    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true&ak=B8qtDCRL7dRFvSyWHuqNXAbG2lv1X3ec"></script>
+    <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true&ak=B8qtDCRL7dRFvSyWHuqNXAbG2lv1X3ec"></script> -->
     <!-- <script type="text/javascript" src="https://api.map.baidu.com/api?key=&v=1.1&services=true"></script> -->
     <!-- <script type="text/javascript" src="https://api.map.baidu.com/api?key=&v=1.1&services=true&s=1"></script> -->
     <!-- Bootstrap core css -->
@@ -67,9 +67,11 @@
             <h1>关于我们</h1>
             <div style=" display: flex;
             flex-direction: row;">
-                <div class="map col-xs-6" id="dituContent"></div>
+                <div class="map col-xs-6" >
+                    <iframe src="map.html"  height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
+                </div>
                 <div class="about col-xs-6">
-                    <p>迈克尔·乔丹在在1984年NBA选秀中于第1轮第3位被芝加哥公牛队选中，职业生涯曾效力于芝加哥公牛队以及华盛顿奇才队，新秀赛季当选NBA年度最佳新秀。1986-87赛季，乔丹场均得到37.1分，首次获得NBA得分王称号。1991-93赛季，乔丹连续2次荣膺常规赛MVP（1991、1992）和3次总决赛MVP（FMVP）
+                    <p  style="font-size:22px" >迈克尔·乔丹在在1984年NBA选秀中于第1轮第3位被芝加哥公牛队选中，职业生涯曾效力于芝加哥公牛队以及华盛顿奇才队，新秀赛季当选NBA年度最佳新秀。1986-87赛季，乔丹场均得到37.1分，首次获得NBA得分王称号。1991-93赛季，乔丹连续2次荣膺常规赛MVP（1991、1992）和3次总决赛MVP（FMVP）
                         [2-3] ，率领芝加哥公牛队3夺NBA总冠军。1993年10月6日因父亲被害而宣布退役，两年后宣布复出。1996年入选NBA50大巨星。</p>
                     <div class="mes"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                         <p>福建省福州市闽侯县</p>
@@ -116,7 +118,7 @@
         </div>
     </div>
 
-    <script src="../js/map.js"></script>
+    <!-- <script src="../js/map.js"></script> -->
 
     <script src="../js/index.js"></script>
     <!-- Bootstrap core JavaScript
