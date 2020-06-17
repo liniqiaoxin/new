@@ -84,14 +84,14 @@ body {
     /*等于footer的高度*/
 
 }
-
+/* 
 #footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     /*脚部的高度*/
-    clear: both;
-}
+    /* clear: both;
+} */ */
 
 .active1 {
     color:#413148!important;

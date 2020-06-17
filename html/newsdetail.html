@@ -37,7 +37,7 @@
 
 <body>
     <!-- Fixed navbar -->
-    <div id="container"  style="display: flex;flex-direction: column;">
+    <div id="container" style=" display: flex;flex-direction: column; justify-content: space-between;">
         <nav id="header" class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -61,49 +61,68 @@
                 <!--/.nav-collapse -->
             </div>
         </nav>
+        <div id="app" style="display: flex; flex-direction: row; justify-content: center;">
+            <div style="width: 1200px;">
 
-        <div id="page" >
-            <div id="app">
-                <div class="new-1 news-de">
-                    <div class="titles">{{list.title}}</div>
-                    <div class="times">{{list.date}}</div>
-                    <div class="col-1 img-1">
-                        <img :data-src="'https://cms.codefriend.top'+list.thumbnail.url">
+                <div class="row featurette" style="margin-top: 50px;">
+                    <div class="col-md-12">
+                        <div class="titles">{{list.title}}</div>
                     </div>
-                    <div class="texts">{{list.content}}</div>
+                </div>
 
-                </div><!-- /.row -->
+                <div class="row featurette">
+                    <div class="col-md-12">
+                        <div class="times">{{list.date}}</div>
+                    </div>
+                </div>
+
+                <div class="row featurette">
+                    <div class="col-md-12">
+                        <div class="col-1 img-1">
+                            <img class="featurette-image img-responsive center-block"
+                                :data-src="'https://cms.codefriend.top'+list.thumbnail.url">
+                        </div>
+                    </div>
+                </div>
+                <div class="row featurette">
+                    <div class="col-md-12">
+                        <div class="texts">{{list.content}}</div>
+
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- /END THE FEATURETTES -->
 
+        <!-- FOOTER -->
+    </div><!-- /.container -->
+    <div class="footer">
+        <footer>
+            <div class="row">
+                <div class="col-xs-6 col-md-4 col-small">
+                    <h3>关于我们</h3>
+                    <p>腾讯NBA频道是NBA官方合作伙伴</p>
+                    <p>覆盖新鲜的NBA赛况</p>
+                    <p>呈现海量NBA资讯 </p>
 
-        <div id="footer" class="footer">
-            <footer>
-                <div class="row">
-                    <div class="col-xs-6 col-md-4 col-small">
-                        <h3>关于我们</h3>
-                        <p>腾讯NBA频道是NBA官方合作伙伴</p>
-                        <p>覆盖新鲜的NBA赛况</p>
-                        <p>呈现海量NBA资讯 </p>
-
-                    </div>
-                    <div class="col-xs-6 col-md-4 col-small">
-                        <h3>我们的位置</h3>
-                        <p>福建省福州市闽侯县</p>
-                        <p>0080-888-555-542</p>
-                        <p>1212121@163.com</p>
-                        <p>周一-周五09:00 am-06:00 pm</p>
-                    </div>
-                    <div class="col-xs-6 col-md-4 col-small">
-                        <p class="sao">扫一扫，了解更多资讯</p>
-                        <span class="footer-img"><img data-src="../images/erweima.png"></span>
-                    </div>
                 </div>
-                <div class="footer-attribution">
-                    <p>© Copyright 2019 xxx.com</p>
+                <div class="col-xs-6 col-md-4 col-small">
+                    <h3>我们的位置</h3>
+                    <p>福建省福州市闽侯县</p>
+                    <p>0080-888-555-542</p>
+                    <p>1212121@163.com</p>
+                    <p>周一-周五09:00 am-06:00 pm</p>
                 </div>
-            </footer>
-        </div>
+                <div class="col-xs-6 col-md-4 col-small">
+                    <p class="sao">扫一扫，了解更多资讯</p>
+                    <span class="footer-img"><img data-src="../images/erweima.png"></span>
+                </div>
+            </div>
+            <div class="footer-attribution">
+                <p>© Copyright 2019 xxx.com</p>
+            </div>
+        </footer>
+    </div>
 
     </div>
 

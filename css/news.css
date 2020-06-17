@@ -23,8 +23,9 @@ body {
     
 }
 .titles{
-    font-size: 24px;
-    margin-bottom: 10px
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 .texts{
     font-size: 18px;
@@ -44,6 +45,8 @@ body {
 }
 
 .news-de {
+    display: flex;
+    flex-direction: column;
     width: 1200px;
     margin: 0 auto;
     padding: 20px 50px;
@@ -53,10 +56,10 @@ body {
 .img-1 {
     margin: 30PX auto;
     text-align:center;
-    width: 800px;
+    /* width: 800px; */
 }
 .img-1>img {
-    width: 800px;
+    /* width: 800px; */
 }
 .new1:hover {
     color: blue;
