@@ -27,8 +27,8 @@ body {
   padding-top: 5px;
 }
 .navbar img {
-  width: 80px;
-  height: 40px;
+  width: 149px;
+  height: 42px;
  margin-left: 15px;
 
 }
@@ -193,6 +193,22 @@ footer>.row {
   .carousel-inner {
     height: 305px;
   }
+  #allmap {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+#l-map {
+    height: 100%;
+    width: 100%;
+}
+
+#r-result {
+    width: 100%;
+}
 }
 
 @media (min-width: 768px) {
@@ -237,6 +253,22 @@ footer>.row {
   .featurette-heading {
     font-size: 50px;
   }
+  #allmap {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+#l-map {
+    height: 100%;
+    width: 100%;
+}
+
+#r-result {
+    width: 100%;
+}
 }
 
 @media (min-width: 992px) {
@@ -266,7 +298,22 @@ footer>.row {
     min-width: 100%;
     /* height: 800px; */
   }
+  #allmap {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
 
+#l-map {
+    height: 100%;
+    width: 100%;
+}
+
+#r-result {
+    width: 100%;
+}
 
   .carousel-control.left {
     background-image:none;

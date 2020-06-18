@@ -16,7 +16,6 @@
     <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=M2muLvxXFaumEvv1q0onYHXtpZ7iyhf5"></script>
 
     <!-- Bootstrap core css -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/bootstrap.css" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -39,7 +38,7 @@
         }
 
         #l-map {
-            height: 500px;
+            height: 100%;
             width: 100%;
         }
 
@@ -83,20 +82,20 @@
 
 
 
-        <div id="app" style="display: flex; flex-direction: row; justify-content: center;">
-            <div style="width: 1200px;">
+        <div  class="container" id="app" >
+          
                 <div class="row featurette" style="margin-top: 50px;">
                     <div class="col-md-12">
                         <h1 style=" margin-bottom: 30px;text-align: center;">关于我们</h1>
                     </div>
                 </div>
-                <div class="row commodity" style=" margin-bottom: 30px;">
-                    <div class="col-xs-6 map">
+                <div class="row " style=" margin-bottom: 30px;">
+                    <div class="col-6 map">
                         <!-- <div style="width:100%;height:100%;border:#ccc solid 1px;font-size:12px" id="map"></div> -->
                         <div id="l-map"></div>
                         <div id="r-result"></div>
                     </div>
-                    <div class="col-xs-6 ">
+                    <div class="col-6 ">
                         <p style="font-size: 22px;">
                             迈克尔·乔丹在在1984年NBA选秀中于第1轮第3位被芝加哥公牛队选中，职业生涯曾效力于芝加哥公牛队以及华盛顿奇才队，新秀赛季当选NBA年度最佳新秀。1986-87赛季，乔丹场均得到37.1分，首次获得NBA得分王称号。1991-93赛季，乔丹连续2次荣膺常规赛MVP（1991、1992）和3次总决赛MVP（FMVP）
                             [2-3] ，率领芝加哥公牛队3夺NBA总冠军。1993年10月6日因父亲被害而宣布退役，两年后宣布复出。1996年入选NBA50大巨星。</p>
@@ -111,8 +110,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
+           
         </div>
 
 
@@ -153,7 +151,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')</script>
-    <script src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/ie10-viewport-bug-workaround.js"></script>

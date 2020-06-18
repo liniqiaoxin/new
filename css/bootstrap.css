@@ -1591,8 +1591,8 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  /* padding-right: 15px;
+  padding-left: 15px; */
   margin-right: auto;
   margin-left: auto;
 }
@@ -1605,11 +1605,43 @@ pre code {
   .container {
     width: 970px;
   }
+  #allmap {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+#l-map {
+    height: 100%;
+    width: 100%;
+}
+
+#r-result {
+    width: 100%;
+}
 }
 @media (min-width: 1200px) {
   .container {
     width: 1200px;
   }
+  #allmap {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+#l-map {
+    height: 100%;
+    width: 100%;
+}
+
+#r-result {
+    width: 100%;
+}
 }
 .container-fluid {
   padding-right: 15px;
