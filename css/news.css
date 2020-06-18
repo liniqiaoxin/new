@@ -58,9 +58,7 @@ body {
     text-align:center;
     /* width: 800px; */
 }
-.img-1>img {
-    /* width: 800px; */
-}
+
 .new1:hover {
     color: blue;
     cursor: pointer;

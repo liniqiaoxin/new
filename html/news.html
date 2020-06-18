@@ -62,7 +62,7 @@
       </div>
     </nav>
 
-    <div class="news">
+    <div class="container news">
       <div id="app">
         <div class="row commodity new1" v-for="(item) in list" :key="item.id" @click="newsClick( item.id )">
           <div class="col-xs-6 col-md-4 imgs">
@@ -147,6 +147,7 @@
       },
       mounted() {
         // 页面一加载完成就执行getList方法
+        
         this.getList();
       },
 
