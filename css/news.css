@@ -8,23 +8,23 @@ body {
     width: 100%;
     height: auto;
 }
-.news {
+/* .news {
     height: auto;
     position: relative;
     margin-top: 50px;
-}
+} */
 .imgs {
     text-align:center;
 }
 .imgs>img {
    
-    width: 100px;
-    margin-bottom: 20px;
+    width: 210px;
+    /* margin-top: 20px; */
     
 }
 .titles{
     font-size: 28px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     margin-bottom: 10px;
 }
 .texts{
@@ -59,6 +59,10 @@ body {
     /* width: 800px; */
 }
 
+.row{
+    margin-top: 20px;
+}
+
 .new1:hover {
     color: blue;
     cursor: pointer;
@@ -69,9 +73,9 @@ body {
         width: 750px;
     }
     .news{
-        width: 98%;
-        margin:  90px auto;
-       padding: 0 15px;
+        width:100%;
+        /* margin:  90px auto; */
+       /* padding: 0 15px; */
     }
     .img-1 {
         margin: 0 auto;
