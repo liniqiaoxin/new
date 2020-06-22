@@ -1,0 +1,11 @@
+.navbar-brand> img {
+    width: 149px;
+    height: 42px;
+}
+.float{
+    display: flex;
+    flex-direction: row-reverse!important;
+}
+.nav-link:hover {
+color: aliceblue;
+}

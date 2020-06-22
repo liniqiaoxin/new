@@ -4,202 +4,214 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="description" content="NBA中国官方网站">
   <meta name="keywords" content="NBA中国,全明星赛,NBA视频直播,NBA赛程,NBA转播表,火箭,热火,湖人,马刺,快船,雷霆,篮网,美职篮,篮球,大卫斯特恩,乔丹,科比,林书豪,">
   <title>NBA新闻</title>
-  <link rel="icon" href="../images/favicon.ico">
+  <link rel="icon" href="../assets/images/favicon.ico">
 
-  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
-  <!-- Bootstrap core css -->
-  <!-- <link href="../css/bootstrap.min.css" rel="stylesheet"> -->
-  <link href="../css/bootstrap.css" rel="stylesheet">
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
 
-  <link href="../css/navbar-fixed-top.css" rel="stylesheet">
-  <script src="../js/ie-emulation-modes-warning.js"></script>
-  <!-- import CSS -->
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/styles/bootstrap.css" rel="stylesheet">
+  <link href="../assets/styles/navbar.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <link href="../css/news.css" rel="stylesheet">
-  <link href="../css/map.css" rel="stylesheet">
-  <link href="../css/carousel.css" rel="stylesheet">
- 
+  <link href="../assets/css/news.css" rel="stylesheet">
+  <link href="../assets/css/map.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles/header.css">
+  <link rel="stylesheet" href="../assets/styles/footer.css">
+  <link rel="stylesheet" href="../assets/styles/newscontent.css">
 
 </head>
-<!-- NAVBAR
-================================================== -->
 
 <body>
-  <div style=" display: flex;flex-direction: column; justify-content: space-between;">
-    <!-- Fixed navbar -->
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-              aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img data-src="../images/logo.png"></a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li ><a id="btn1" href="index.html">首页</a></li>
-              <li ><a id="btn2" class="active1" href="news.html">新闻</a></li>
-              <li ><a id="btn3" href="about.html">关于我们</a></li>
-            </ul>
-          </div>
-          <!--/.nav-collapse -->
-        </div>
-      </nav>
- 
+  <!-- <div style=" display: flex;flex-direction: column; justify-content: space-between;"> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-xl">
+      <a class="navbar-brand" href="index.html"><img data-src="../assets/images/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07XL"
+        aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="container news">
-      <div id="app">
-        <div class="row commodity new1" v-for="(item) in list" :key="item.id" @click="newsClick( item.id )">
-          <div class="col-xs-6 col-md-4 imgs">
+      <div class="float collapse navbar-collapse " id="navbarsExample07XL">
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">首页 </span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="news.html">新闻 </span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="about.html">关于我们</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container news">
+    <div id="app">
+      <div class=" row row-cols-2 row-cols-sm-2 row-cols-md-4  justify-content-around">
+        <div class="col col-text new1" v-for="(item) in list" :key="item.id" @click="newsClick( item.id )">
+
+          <!-- <div class="col"> -->
+          <div class="bd-placeholder-img newsimg">
             <img :data-src="'https://cms.codefriend.top'+item.thumbnail.url">
           </div>
-          <div class="col-xs-12 col-md-8 new1">
-            <div class="titles">{{item.title}}</div>
-            <div class="times">{{item.date}}</div>
-            <div class="texts">{{item.smallCon}}</div>
-          </div>
-        </div><!-- /.row -->
-        <div>
-          <div class="wp-pager">
-            <div class="pagination">
-              <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange"
-                :current-page="currentPage" :page-size="pageSize" layout="total,prev, pager, next" :total="total">
-              </el-pagination>
-            </div>
-          </div>
+          <!-- <hr> -->
+          <div class="titles" style="font-size: 18px;">{{item.title}} </div>
+          <!-- <div class="times" style="font-size: 14px; ">{{item.date}}</div>
+          <div class="texts">{{item.smallCon}}</div> -->
+         
         </div>
+
       </div>
 
-    </div>
-
-
-    <div class="footer">
-      <footer>
-        <div class="row">
-          <div class="col-xs-6 col-md-4 col-small">
-            <h3>关于我们</h3>
-            <p>腾讯NBA频道是NBA官方合作伙伴</p>
-            <p>覆盖新鲜的NBA赛况</p>
-            <p>呈现海量NBA资讯 </p>
-
-          </div>
-          <div class="col-xs-6 col-md-4 col-small">
-            <h3>我们的位置</h3>
-            <p>福建省福州市闽侯县</p>
-            <p>0080-888-555-542</p>
-            <p>1212121@163.com</p>
-            <p>周一-周五09:00 am-06:00 pm</p>
-          </div>
-          <div class="col-xs-6 col-md-4 col-small">
-            <p class="sao">扫一扫，了解更多资讯</p>
-            <span class="footer-img"><img data-src="../images/erweima.png"></span>
-          </div>
+      <div class="wp-pager pagination-flex">
+        <div class="pagination">
+          <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange"
+            :current-page="currentPage" :page-size="pageSize" layout="total,prev, pager, next" :total="total">
+          </el-pagination>
         </div>
-        <div class="footer-attribution">
-          <p>© Copyright 2019 xxx.com</p>
-        </div>
-      </footer>
+      </div>
     </div>
   </div>
+  </div>
+  </div>
+
+  <footer>
+    <div class="container footer">
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 justify-content-between">
+            <div class="col col-text">
+                <hr>
+                <p class="mes">NBA101</p>
+                <p class="aboutmes">NBA历史</p>
+                <p class="aboutmes">NBA50大球星</p>
+                <p class="aboutmes">NBA知识Q&A</p>
+                <p class="aboutmes">选秀大会</p>
+            </div>
+            <div class="col col-text">
+                <hr>
+                <p class="mes">关于我们</p>
+                <p class="aboutmes">腾讯NBA频道是</p>
+                <p class="aboutmes">官方合作伙伴</p>
+                <p class="aboutmes">覆盖新鲜的NBA赛况</p>
+                <p class="aboutmes">呈现海量NBA资讯</p>
+            </div>
+            <div class="col col-text">
+                <hr>
+                <p class="mes">我们的位置</p>
+                <p class="aboutmes">福建省福州市闽侯县</p>
+                <p class="aboutmes">0080-888-555-542</p>
+                <p class="aboutmes">1212121@163.com</p>
+                <p class="aboutmes">周一-周五09:00am-06:00pm</p>
+            </div>
+            <div class="col col-text">
+                <hr>
+                <p class="sao ">扫一扫，了解更多资讯</p>
+                <img data-src="../assets/images/erweima.png">
+            </div>
+        </div>
+        <hr>
+        <div class="footer-attribution">
+            <p class="aboutmes" style="font-family: Microsoft YaHei;font-size:14px">© Copyright 2019 xxx.com</p>
+        </div>
+    </div>
+    </div>
+</footer>
+
+  <!-- 图片懒加载 -->
   <script src="../js/index.js"></script>
   <!-- import Vue before Element -->
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <!-- import JavaScript -->
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-  
-  <script>window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')</script>
-
-  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
- 
-  <!-- <script src="../js/bootstrap.min.js"></script> -->
-  <script src="../js/ie10-viewport-bug-workaround.js"></script>
-  <script>
 
 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../js/bootstrap.bundle.js"></script>
+</body>
 
-    let vm = new Vue({
-      el: '#app',
-      data() {
-        return {
-          list: [],
-          url: 'news.html?',
-          total: 0,
-          pageSize: 10,
-          currentPage: 1,
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data() {
+      return {
+        list: [],
+        url: 'news.html?',
+        total: 0,
+        pageSize: 10,
+        currentPage: 1,
 
-        }
+      }
+    },
+    mounted() {
+      // 页面一加载完成就执行getList方法
+
+      this.getList();
+    },
+
+    methods: {
+      getList() {
+        var obj = { _start: (this.currentPage - 1) * this.pageSize, _limit: this.pageSize }
+
+        axios.get('https://cms.codefriend.top/posts', { params: obj })
+          .then(response => {
+            this.list = response.data;
+            console.log("list:", this.list);
+          })
+          .catch(response => {
+            console.log("获取数据失败");
+          });
+        axios.get('https://cms.codefriend.top/posts/count')
+          .then(response => {
+            this.total = response.data;
+            console.log("total:", this.total);
+          })
+          .catch(response => {
+            console.log("获取数据失败");
+          });
+
       },
-      mounted() {
-        // 页面一加载完成就执行getList方法
-        
-        this.getList();
+      handleSizeChange: function (size) {
+        this.pageSize = size;
+        console.log(this.pageSize);  //每页下拉显示数据
+        this.getList(this.currentPage, this.pageSize);
       },
+      handleCurrentChange: function (currentPage) {
+        this.currentPage = currentPage;
+        console.log(this.currentPage);  //点击第几页
+        this.getList(this.currentPage, this.pageSize);
 
-      methods: {
-        getList() {
-          var obj = { _start: (this.currentPage - 1) * this.pageSize, _limit: this.pageSize }
-
-          axios.get('https://cms.codefriend.top/posts', { params: obj })
-            .then(response => {
-              this.list = response.data;
-              console.log("list:", this.list);
-            })
-            .catch(response => {
-              console.log("获取数据失败");
-            });
-          axios.get('https://cms.codefriend.top/posts/count')
-            .then(response => {
-              this.total = response.data;
-              console.log("total:", this.total);
-            })
-            .catch(response => {
-              console.log("获取数据失败");
-            });
-
-        },
-        handleSizeChange: function (size) {
-          this.pageSize = size;
-          console.log(this.pageSize);  //每页下拉显示数据
-          this.getList(this.currentPage, this.pageSize);
-        },
-        handleCurrentChange: function (currentPage) {
-          this.currentPage = currentPage;
-          console.log(this.currentPage);  //点击第几页
-          this.getList(this.currentPage, this.pageSize);
-
-        },
-        newsClick(canshu) { //canshu是形参,在实际调用里实参是cctz(item.desc)里的item.desc
-          // escape将字符串转化成编码格式,接收页面到时候再转回来
-          var url = 'newsdetail.html' + '?id=' + escape(canshu);
-          window.open(url);
-        }
       },
+      newsClick(canshu) { //canshu是形参,在实际调用里实参是cctz(item.desc)里的item.desc
+        // escape将字符串转化成编码格式,接收页面到时候再转回来
+        var url = 'newsdetail.html' + '?id=' + escape(canshu);
+        window.open(url);
+      }
+    },
 
 
 
 
-    })
+  })
 
-  
-  </script>
+
+</script>
 
 
 </body>
-
 </html>
