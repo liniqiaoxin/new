@@ -10,22 +10,18 @@
     <meta name="description" content="NBA中国官方网站">
     <meta name="keywords" content="NBA中国,全明星赛,NBA视频直播,NBA赛程,NBA转播表,火箭,热火,湖人,马刺,快船,雷霆,篮网,美职篮,篮球,大卫斯特恩,乔丹,科比,林书豪,">
     <title>关于我们</title>
-    <link rel="icon" href="../images/favicon.ico">
+    <link rel="icon" href="../assets/images/favicon.ico">
 
     <!--引用百度地图API-->
     <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=M2muLvxXFaumEvv1q0onYHXtpZ7iyhf5"></script>
-
-    <!-- Bootstrap core css -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <link href="../css/navbar-fixed-top.css" rel="stylesheet">
-    <script src="../js/ie-emulation-modes-warning.js"></script>
-
-    <!-- Custom styles for this template -->
-    <link href="../css/carousel.css" rel="stylesheet">
-    <link href="../css/map.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
+    <link href="../assets/styles/bootstrap.css" rel="stylesheet">
+    <link href="../assets/styles/navbar.css" rel="stylesheet">
+    <link href="../assets/css/news.css" rel="stylesheet">
+    <link href="../assets/css/map.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/header.css">
+    <link rel="stylesheet" href="../assets/styles/footer.css">
+    <link rel="stylesheet" href="../assets/styles/newscontent.css">
     <style type="text/css">
         body,
         html,
@@ -38,8 +34,11 @@
         }
 
         #l-map {
-            height: 100%;
+            height: 360px;
             width: 100%;
+            max-width: 100%;
+            max-height: 360px;
+            margin-bottom: 15px;
         }
 
         #r-result {
@@ -48,112 +47,114 @@
     </style>
 
 </head>
-<!-- NAVBAR
-================================================== -->
 
 <body class="b">
-    <div id="container" style=" display: flex;flex-direction: column; justify-content: space-between;">
-        <!-- Fixed navbar -->
-        <div id="header" class="navbar navbar-default navbar-fixed-top">
-            <nav>
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand"  href="index.html"s><img data-src="../images/logo.png"></a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li id="btn1"><a href="index.html">首页</a></li>
-                            <li id="btn2"><a href="news.html">新闻</a></li>
-                            <li id="btn3"><a class="active1" href="about.html">关于我们</a></li>
-                        </ul>
 
-                    </div>
-                    <!--/.nav-collapse -->
-                </div>
-            </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-xl">
+            <a class="navbar-brand" href="index.html"><img data-src="../assets/images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07XL"
+                aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="float collapse navbar-collapse " id="navbarsExample07XL">
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">首页 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">新闻</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="about.html">关于我们</span></a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
 
-
-        <div  class="container" id="app" >
-          
-                <div class="row featurette" style="margin-top: 50px;">
-                    <div class="col-md-12">
-                        <h1 style=" margin-bottom: 30px;text-align: center;">关于我们</h1>
-                    </div>
-                </div>
-                <div class="row " style=" margin-bottom: 30px;">
-                    <div class="col-6 map">
-                        <!-- <div style="width:100%;height:100%;border:#ccc solid 1px;font-size:12px" id="map"></div> -->
-                        <div id="l-map"></div>
-                        <div id="r-result"></div>
-                    </div>
-                    <div class="col-6 ">
-                        <p style="font-size: 22px;">
-                            迈克尔·乔丹在在1984年NBA选秀中于第1轮第3位被芝加哥公牛队选中，职业生涯曾效力于芝加哥公牛队以及华盛顿奇才队，新秀赛季当选NBA年度最佳新秀。1986-87赛季，乔丹场均得到37.1分，首次获得NBA得分王称号。1991-93赛季，乔丹连续2次荣膺常规赛MVP（1991、1992）和3次总决赛MVP（FMVP）
-                            [2-3] ，率领芝加哥公牛队3夺NBA总冠军。1993年10月6日因父亲被害而宣布退役，两年后宣布复出。1996年入选NBA50大巨星。</p>
-                        <div class="mes"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                            <p>福建省福州市闽侯县</p>
-                        </div>
-                        <div class="mes"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                            <p>121212@123</p>
-                        </div>
-                        <div class="mes"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
-                            <p>0080-888-555-542</p>
-                        </div>
-                    </div>
-                </div>
-           
+    <div class="container " id="app" style="margin-bottom: 50px;">
+        <div class="row featurette">
+            <div class="col-md-12">
+                <h1 class="about-title" style=" margin-bottom: 30px;text-align: center;">关于我们</h1>
+            </div>
         </div>
+        <div class=" row  row-cols-1 row-cols-sm-1 row-cols-md-2 justify-content-between ">
+            <div class="col map">
+                <div id="l-map"></div>
+                <div id="r-result"></div>
+                <hr>
+            </div>
 
-
-        <div class="footer">
-            <footer>
-                <div class="row">
-                    <div class="col-xs-6 col-md-4 col-small">
-                        <h3>关于我们</h3>
-                        <p>腾讯NBA频道是NBA官方合作伙伴</p>
-                        <p>覆盖新鲜的NBA赛况</p>
-                        <p>呈现海量NBA资讯 </p>
-
-                    </div>
-                    <div class="col-xs-6 col-md-4 col-small">
-                        <h3>我们的位置</h3>
-                        <p>福建省福州市闽侯县</p>
-                        <p>0080-888-555-542</p>
-                        <p>1212121@163.com</p>
-                        <p>周一-周五09:00 am-06:00 pm</p>
-                    </div>
-                    <div class="col-xs-6 col-md-4 col-small">
-                        <p class="sao">扫一扫，了解更多资讯</p>
-                        <span class="footer-img"><img data-src="../images/erweima.png"></span>
-                    </div>
+            <div class="col ">
+                <p class="aboutmes">
+                    迈克尔·乔丹在在1984年NBA选秀中于第1轮第3位被芝加哥公牛队选中，职业生涯曾效力于芝加哥公牛队以及华盛顿奇才队，新秀赛季当选NBA年度最佳新秀。1986-87赛季，乔丹场均得到37.1分，首次获得NBA得分王称号。1991-93赛季，乔丹连续2次荣膺常规赛MVP（1991、1992）和3次总决赛MVP（FMVP）
+                    [2-3] ，率领芝加哥公牛队3夺NBA总冠军。1993年10月6日因父亲被害而宣布退役，两年后宣布复出。1996年入选NBA50大巨星。</p>
+                <div class="mes"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    <p>地址：福建省福州市闽侯县</p>
                 </div>
-                <div class="footer-attribution">
-                    <p>© Copyright 2019 xxx.com</p>
+                <div class="mes"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <p>邮箱：121212@123</p>
                 </div>
-            </footer>
+                <div class="mes"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                    <p>电话：0080-888-555-542</p>
+                </div>
+            </div>
         </div>
-
     </div>
-    <!-- <script src="../js/map.js"></script> -->
 
+    <footer>
+        <div class="container footer">
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 justify-content-between">
+                <div class="col col-text">
+                    <hr>
+                    <p class="mes">NBA101</p>
+                    <p class="aboutmes">NBA历史</p>
+                    <p class="aboutmes">NBA50大球星</p>
+                    <p class="aboutmes">NBA知识Q&A</p>
+                    <p class="aboutmes">选秀大会</p>
+                </div>
+                <div class="col col-text">
+                    <hr>
+                    <p class="mes">关于我们</p>
+                    <p class="aboutmes">腾讯NBA频道是</p>
+                    <p class="aboutmes">官方合作伙伴</p>
+                    <p class="aboutmes">覆盖新鲜的NBA赛况</p>
+                    <p class="aboutmes">呈现海量NBA资讯</p>
+                </div>
+                <div class="col col-text">
+                    <hr>
+                    <p class="mes">我们的位置</p>
+                    <p class="aboutmes">福建省福州市闽侯县</p>
+                    <p class="aboutmes">0080-888-555-542</p>
+                    <p class="aboutmes">1212121@163.com</p>
+                    <p class="aboutmes">周一-周五09:00am-06:00pm</p>
+                </div>
+                <div class="col col-text">
+                    <hr>
+                    <p class="sao ">扫一扫，了解更多资讯</p>
+                    <img data-src="../assets/images/erweima.png">
+                </div>
+            </div>
+            <hr>
+            <div class="footer-attribution">
+                <p class="aboutmes" style="font-family: Microsoft YaHei;font-size:14px">© Copyright 2019 xxx.com</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- 图片懒加载 -->
     <script src="../js/index.js"></script>
-    <!-- Bootstrap core JavaScript
-================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')</script>
 
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.bundle.js"></script>
     <script type="text/javascript">
         // 百度地图API功能
         var sContent = "福建省福州市仓山区建新镇金山大道618号金山工业区桔园洲园38号楼3层307室";
@@ -165,7 +166,6 @@
         map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
         map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
     </script>
-
 </body>
 
 </html>

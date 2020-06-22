@@ -12,17 +12,13 @@ body {
     font-weight: 700;
     margin-bottom: 30px;
 }
-.map {
-    position: relative;
-    float: left;
-    width:50%;
-    height:500px;
-    /* border:#ccc solid 1px; */
-    font-size:12px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+/* .map {
+    width:auto;
+    height:auto;
+    max-width:60%;
+    max-height:60%;
+} */
 
-}
 .about {
     width: 50%;
     float: left;
@@ -32,10 +28,7 @@ body {
 .about>p {
     text-indent: 2em;
 }
-.mes {
-    margin-top: 20px;
-    font-size: 22px;
-}
+
 .mes>span {
     float: left;
     margin-right: 10px;
@@ -47,11 +40,11 @@ body {
 /*小于 750px*/
 
 @media screen and (max-width: 750px){
-    .map {
+    /* .map {
         width: 100%;
-        height: 300px;
-        /* margin-left: 15px; */
-    }
+        height: 100%;
+       
+    } */
     .about {
         width: 100%;
     }
