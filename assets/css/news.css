@@ -98,3 +98,8 @@ body {
     }
     
 } */
+
+#app {
+
+    display: none;
+}

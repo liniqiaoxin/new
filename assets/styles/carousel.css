@@ -25,7 +25,7 @@
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 1rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -52,11 +52,11 @@
   } */
 }
 
-@media (min-width: 62em) {
+/* @media (min-width: 62em) {
   .featurette-heading-top {
     margin-top: 4rem;
   }
-}
+} */
 .img-responsive-div{
   display: flex;
   align-items: center;

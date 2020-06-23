@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <!-- <div style=" display: flex;flex-direction: column; justify-content: space-between;"> -->
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-xl">
       <a class="navbar-brand" href="index.html"><img data-src="../assets/images/logo.png"></a>
@@ -59,6 +59,7 @@
     </div>
   </nav>
 
+  <div id="loading" style="height: 300px;  line-height: 300px; text-align: center;">正在加载...</div>
   <div class="container news">
     <div id="app">
       <div class=" row row-cols-2 row-cols-sm-2 row-cols-md-4  justify-content-around">
@@ -72,7 +73,7 @@
           <div class="titles" style="font-size: 18px;">{{item.title}} </div>
           <!-- <div class="times" style="font-size: 14px; ">{{item.date}}</div>
           <div class="texts">{{item.smallCon}}</div> -->
-         
+
         </div>
 
       </div>
@@ -91,44 +92,44 @@
 
   <footer>
     <div class="container footer">
-        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 justify-content-between">
-            <div class="col col-text">
-                <hr>
-                <p class="mes">NBA101</p>
-                <p class="aboutmes">NBA历史</p>
-                <p class="aboutmes">NBA50大球星</p>
-                <p class="aboutmes">NBA知识Q&A</p>
-                <p class="aboutmes">选秀大会</p>
-            </div>
-            <div class="col col-text">
-                <hr>
-                <p class="mes">关于我们</p>
-                <p class="aboutmes">腾讯NBA频道是</p>
-                <p class="aboutmes">官方合作伙伴</p>
-                <p class="aboutmes">覆盖新鲜的NBA赛况</p>
-                <p class="aboutmes">呈现海量NBA资讯</p>
-            </div>
-            <div class="col col-text">
-                <hr>
-                <p class="mes">我们的位置</p>
-                <p class="aboutmes">福建省福州市闽侯县</p>
-                <p class="aboutmes">0080-888-555-542</p>
-                <p class="aboutmes">1212121@163.com</p>
-                <p class="aboutmes">周一-周五09:00am-06:00pm</p>
-            </div>
-            <div class="col col-text">
-                <hr>
-                <p class="sao ">扫一扫，了解更多资讯</p>
-                <img data-src="../assets/images/erweima.png">
-            </div>
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 justify-content-between">
+        <div class="col col-text">
+          <hr>
+          <p class="mes">NBA101</p>
+          <p class="aboutmes">NBA历史</p>
+          <p class="aboutmes">NBA50大球星</p>
+          <p class="aboutmes">NBA知识Q&A</p>
+          <p class="aboutmes">选秀大会</p>
         </div>
-        <hr>
-        <div class="footer-attribution">
-            <p class="aboutmes" style="font-family: Microsoft YaHei;font-size:14px">© Copyright 2019 xxx.com</p>
+        <div class="col col-text">
+          <hr>
+          <p class="mes">关于我们</p>
+          <p class="aboutmes">腾讯NBA频道是</p>
+          <p class="aboutmes">官方合作伙伴</p>
+          <p class="aboutmes">覆盖新鲜的NBA赛况</p>
+          <p class="aboutmes">呈现海量NBA资讯</p>
         </div>
+        <div class="col col-text">
+          <hr>
+          <p class="mes">我们的位置</p>
+          <p class="aboutmes">福建省福州市闽侯县</p>
+          <p class="aboutmes">0080-888-555-542</p>
+          <p class="aboutmes">1212121@163.com</p>
+          <p class="aboutmes">周一-周五09:00am-06:00pm</p>
+        </div>
+        <div class="col col-text">
+          <hr>
+          <p class="sao ">扫一扫，了解更多资讯</p>
+          <img data-src="../assets/images/erweima.png">
+        </div>
+      </div>
+      <hr>
+      <div class="footer-attribution">
+        <p class="aboutmes" style="font-family: Microsoft YaHei;font-size:14px">© Copyright 2019 xxx.com</p>
+      </div>
     </div>
     </div>
-</footer>
+  </footer>
 
   <!-- 图片懒加载 -->
   <script src="../js/index.js"></script>
@@ -146,6 +147,12 @@
 </body>
 
 <script>
+  function initPage() {
+    var objLoading = document.getElementById("LoadingBar");
+    if (objLoading != null) {
+      objLoading.style.display = "none";
+    }
+  }
   let vm = new Vue({
     el: '#app',
     data() {
@@ -172,6 +179,8 @@
           .then(response => {
             this.list = response.data;
             console.log("list:", this.list);
+            $("#loading").hide();
+            $("#app").show();
           })
           .catch(response => {
             console.log("获取数据失败");
@@ -203,10 +212,6 @@
         window.open(url);
       }
     },
-
-
-
-
   })
 
 
@@ -214,4 +219,5 @@
 
 
 </body>
+
 </html>
