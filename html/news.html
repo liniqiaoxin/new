@@ -63,16 +63,18 @@
   <div class="container news">
     <div id="app">
       <div class=" row row-cols-2 row-cols-sm-2 row-cols-md-4  justify-content-around">
-        <div class="col col-text new1" v-for="(item) in list" :key="item.id" @click="newsClick( item.id )">
+        <div class="col  new1" v-for="(item) in list" :key="item.id" @click="newsClick( item.id )">
 
           <!-- <div class="col"> -->
-          <div class="bd-placeholder-img newsimg">
-            <img :data-src="'https://cms.codefriend.top'+item.thumbnail.url">
+          <div class=" newsimg">
+            <img :data-src="'https://cms.codefriend.top'+item.thumbnail.url" >
           </div>
           <!-- <hr> -->
-          <div class="titles" style="font-size: 18px;">{{item.title}} </div>
-          <!-- <div class="times" style="font-size: 14px; ">{{item.date}}</div>
-          <div class="texts">{{item.smallCon}}</div> -->
+          <div class="titles" style="font-size: 18px;">{{item.title}} 
+           
+          </div>
+          <div class="times" style="font-size: 14px;">{{item.date}}</div>
+          <div class="texts">{{item.smallCon}}</div>
 
         </div>
 
