@@ -61,7 +61,7 @@
 
   <div id="loading" style="height: 300px;  line-height: 300px; text-align: center;">正在加载...</div>
   <div class="container news">
-    <div id="app">
+    <div id="app" style="display: flex; flex-direction: column;  justify-content:space-between">
       <div class=" row row-cols-2 row-cols-sm-2 row-cols-md-4  justify-content-around">
         <div class="col  new1" v-for="(item) in list" :key="item.id" @click="newsClick( item.id )">
 
@@ -73,8 +73,8 @@
           <div class="titles" style="font-size: 18px;">{{item.title}} 
            
           </div>
-          <div class="times" style="font-size: 14px;">{{item.date}}</div>
-          <div class="texts">{{item.smallCon}}</div>
+          <!-- <div class="times" style="font-size: 14px;">{{item.date}}</div>
+          <div class="texts">{{item.smallCon}}</div> -->
 
         </div>
 

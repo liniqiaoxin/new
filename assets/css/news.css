@@ -101,6 +101,9 @@ body {
 } */
 
 #app {
-
+    width:auto;
+    height:auto;
+    max-width:100%;
+    min-height:600px;
     display: none;
 }
