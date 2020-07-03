@@ -65,7 +65,7 @@
             </div>
         </div>
     </nav>
-    <div id="loading" style="height: 300px;  line-height: 300px; text-align: center;">正在加载...</div>
+    <!-- <div id="loading" style="height: 300px;  line-height: 300px; text-align: center;">正在加载...</div> -->
     <div id="app" style="display: flex; flex-direction: row; justify-content: center;">
         <div style="width: 1200px;">
             <div class="row featurette" style="margin-top: 20px;">
@@ -218,9 +218,8 @@
                             console.log("id:", this.newsId);
                             this.list = response.data[this.newsId - 4];
                             console.log("list:", this.list);
-                            $("#loading").hide();
-                            $("#app").show();
-
+                            // $("#loading").hide();
+                            // $("#app").show();
                         })
                         .catch(response => {
                             console.log("获取数据失败");
