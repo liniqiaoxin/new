@@ -27,14 +27,21 @@
   <link rel="stylesheet" href="../assets/styles/header.css">
   <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/newscontent.css">
+  <style>
+    #app {
+      display: none;
+    }
+  </style>
 
 </head>
+
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-xl">
-      <a class="navbar-brand" href="index.html"><img data-src="../assets/images/logo.png"></a>
+      <a class="navbar-brand" href="index.html"><img data-src="../assets/images/logo.png"
+          src="../assets/images/logo.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07XL"
         aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -52,7 +59,11 @@
           <li class="nav-item">
             <a class="nav-link " href="about.html">关于我们</a>
           </li>
-
+          <li class="nav-item linkBtn">
+            <a type="button" class="nav-link" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+              联系我们
+            </a>
+          </li>
         </ul>
 
       </div>
@@ -61,17 +72,17 @@
 
   <div id="loading" style="height: 300px;  line-height: 300px; text-align: center;">正在加载...</div>
   <div class="container news">
-    <div id="app" style="display: flex; flex-direction: column;  justify-content:space-between">
+    <div id="app" style="display: none; ">
       <div class=" row row-cols-2 row-cols-sm-2 row-cols-md-4  justify-content-around">
         <div class="col  new1" v-for="(item) in list" :key="item.id" @click="newsClick( item.id )">
 
           <!-- <div class="col"> -->
           <div class=" newsimg">
-            <img :data-src="'https://cms.codefriend.top'+item.thumbnail.url" >
+            <img :data-src="'https://cms.codefriend.top'+item.thumbnail.url" src="../assets/images/new01.jpg">
           </div>
           <!-- <hr> -->
-          <div class="titles" style="font-size: 18px;">{{item.title}} 
-           
+          <div class="titles" style="font-size: 18px;">{{item.title}}
+
           </div>
           <!-- <div class="times" style="font-size: 14px;">{{item.date}}</div>
           <div class="texts">{{item.smallCon}}</div> -->
@@ -133,6 +144,36 @@
     </div>
   </footer>
 
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">您的评价是对我们的支持</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">邮箱:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">反馈信息:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">发送</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 图片懒加载 -->
   <script src="../js/index.js"></script>
   <!-- import Vue before Element -->
@@ -149,12 +190,6 @@
 </body>
 
 <script>
-  function initPage() {
-    var objLoading = document.getElementById("LoadingBar");
-    if (objLoading != null) {
-      objLoading.style.display = "none";
-    }
-  }
   let vm = new Vue({
     el: '#app',
     data() {
@@ -164,12 +199,10 @@
         total: 0,
         pageSize: 10,
         currentPage: 1,
-
       }
     },
     mounted() {
       // 页面一加载完成就执行getList方法
-
       this.getList();
     },
 
@@ -183,6 +216,11 @@
             console.log("list:", this.list);
             $("#loading").hide();
             $("#app").show();
+            var app = document.getElementById("app");
+            app.style.display = "red";
+            app.style.flexDirection = "column";
+            app.style.justifyContent = "space-between";
+
           })
           .catch(response => {
             console.log("获取数据失败");
